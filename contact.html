@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - TravelEase</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    function validateForm() {
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      const subject = document.forms["contactForm"]["subject"].value;
+      const message = document.forms["contactForm"]["message"].value;
+
+      if (!name || !email || !subject || !message) {
+        alert("All fields must be filled out.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Contact TravelEase</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="trip-planner.html">Trip Planner</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Email: contact@travelease.pk</p>
+      <p>WhatsApp: +92 300 1234567</p>
+      <p>Office: Skardu City Center, Gilgit-Baltistan</p>
+      <p>Office Hours: Mon–Sat, 10AM to 6PM</p>
+
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Send a Message</h2>
+      <form name="contactForm" onsubmit="return validateForm()">
+        <label>Name:</label><br>
+        <input type="text" name="name"><br>
+        <label>Email:</label><br>
+        <input type="email" name="email"><br>
+        <label>Subject:</label><br>
+        <input type="text" name="subject"><br>
+        <label>Message:</label><br>
+        <textarea name="message" rows="5" cols="30"></textarea><br>
+        <input type="submit" value="Send">
+      </form>
+    </section>
+
+    <section>
+      <h2>Our Location</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Skardu_Map.png" alt="Map of Skardu" width="100%">
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 TravelEase</p>
+  </footer>
+</body>
+</html>
